@@ -20,7 +20,7 @@ group Continuous Process
     extruder -> haul_off : Synchronize speed
     
     loop Every cycle
-        rail -> press : Position 0 reached
+        rail -> press : Position reached
         press -> press : Close mold
         rail -> rail : Move to end position
         

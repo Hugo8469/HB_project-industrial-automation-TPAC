@@ -1,1 +1,8 @@
-# Chapter 1
+Industrial Automation Project
+
+Components: Arne, Esmee, Hugo, Michele
+
+Process explenation:
+
+TPAC developed a low shear mixing process, in which thermoplastic composite material is recycled in a cost-effective way, aimed to obtain the highest possible material properties. Recently TPAC started to industrialize this process, resulting in switching from a batch scale mixing process, to a continuous extrusion process. Currently the output from the extruder, a molten and mixed dough, is directly transferred to a compression mould. However in some cases the production of a semi-finished product is desired. This semi-finished product can be produced by means of CCM, whereby the molten en mixed dough is compression moulded into sheet material. This material can be reheated by means of infrared heating, to later produce parts.
+
