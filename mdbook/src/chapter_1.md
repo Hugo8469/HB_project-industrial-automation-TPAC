@@ -9,3 +9,4 @@ This manual is build as follows:
 - Workflow of the process
 - Control of the process
 - Safety of the process
+- Preparation for implementation
