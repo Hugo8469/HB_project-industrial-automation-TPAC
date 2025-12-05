@@ -1,6 +1,6 @@
 # Interfaces
-
-@startuml pickup_parcel_from_coveyor
+```plantuml
+@startuml 
 skinparam backgroundColor transparent
 left to right direction
 
@@ -52,3 +52,4 @@ frame --> location
 cabinet -r-> energy
 
 @enduml
+```
