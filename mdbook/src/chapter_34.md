@@ -25,11 +25,15 @@ component Press as "Press Machine" {
     [Temperature Control]
 
 }
+    component Temperature_Control as "Temperature Control"{
+    [Infrared Lamp]
+    [Cooling System]
+}
 
 ' Material flow and actions
 [Thermoplastic Material] -> [Hot Material] : Material Processed
 [Hot Material] --> [Pulling Mechanism] : **Is Extruded**
-[Infrared Lamp] --> [Hot Material] : Keeping Temperature
+[Infrared Lamp] -up-> [Hot Material] : Keeping Temperature
 
 
 
@@ -53,6 +57,7 @@ legend right
   - --> : Material Flow
   - .> : Mechanical Action or Movement
 end legend
+[Processed Material] -up-> [Cooling System] : **Pressing/Opening 
 
 'Synchronization of the whole process
 [Speed] .right.> [Pulling Mechanism] : Pulled Material Speed
@@ -61,6 +66,7 @@ end legend
 [Rail Position] ..> [Moving Rails] : Initial/Final position
 [Cylinder] ..> [Pressing Cylinder] : Pressing/Opening action
 [Temperature Control] ..> [Infrared Lamp] : Temperature Manegement
+[Temperature Control] ..> [Cooling System] : Temperature Manegement
 @enduml
 ```
 
