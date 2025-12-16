@@ -98,7 +98,6 @@ component Interfaces_diagram {
     [Haul_Off]
     () "Thermoplastic\nposition" -- Haul_Off
     Haul_Off --> "Haul_Off\npower"
-    Haul_Off --> "sensor\nposition"
     [Thermoplastic]
     () shape -- Thermoplastic
     
