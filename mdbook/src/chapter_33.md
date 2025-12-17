@@ -1,5 +1,4 @@
 # Interfaces
-```plantuml
 @startuml 
 skinparam backgroundColor transparent
 left to right direction
@@ -75,7 +74,6 @@ frame --> location
 room -r-> energy
 
 @enduml
-```
 
 ```plantuml
 @startuml 
