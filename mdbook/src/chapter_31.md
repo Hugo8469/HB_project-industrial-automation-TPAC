@@ -69,16 +69,17 @@ skinparam ArrowColor white
 
 
 RECTANGLE "Change Shape" as ChangeShape
-RECTANGLE "Force" as Force
+RECTANGLE "Actuate Force" as Force
+RECTANGLE "Remove Air" as RemoveAir
 RECTANGLE "Change Width" as ChangeWidth
 RECTANGLE "Change Height" as ChangeHeight
 RECTANGLE "Force Control" as ForceControl
 
-ChangeShape --> Force
-ChangeShape --> ForceControl
+ChangeShape --> RemoveAir
 ChangeShape --> ChangeWidth
 ChangeShape --> ChangeHeight
-
+RemoveAir --> Force
+RemoveAir --> ForceControl
 @enduml
 
 ```
