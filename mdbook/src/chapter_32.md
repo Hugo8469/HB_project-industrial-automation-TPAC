@@ -6,37 +6,49 @@
 @startuml
 title Linear Extrusion Process Flow
 
+participant "User"
 participant "Extruder" as extruder
+participant "Infrared Lamp" as InfraredLamp
 participant "Linear Rail" as rail
 participant "Press" as press
+participant "Cylinder" 
 participant "Haul Off" as haul_off
-participant "Cutter" as cutter
+participant "Cooling System" as CoolingSystem
+participant "Synchronization"
+
 
 == Initialization ==
-extruder -> rail : Check home position
-rail -> rail : Move to start position
-press -> press : Ensure open position
+
+extruder -> Synchronization : Material speed
+Synchronization -> haul_off : Speed Synchronization
+Synchronization -> rail : Speed Synchronization
+Synchronization -> Synchronization : Wait until rail position reached
+Synchronization -> InfraredLamp : Start heating, and keep the desired position
+InfraredLamp -> Synchronization : Temperature reached
+Synchronization -> haul_off : Start pullung material
+Synchronization -> CoolingSystem : Start colling, and keep to the desire position
 
 == Production Cycle ==
 group Continuous Process
-    extruder -> extruder : Start material feed
-    extruder -> haul_off : Synchronize speed
+    User -> extruder : Start material feed
     
     loop Every cycle
-        rail -> press : Position 0 reached
-        press -> press : Close mold
-        rail -> rail : Move to end position
-        
-        alt Rail at end position
-            press -> press : Open mold
-            rail -> rail : Return to start
-            cutter -> cutter : Cut product
+        Synchronization -> rail : Home position
+        opt Rail at start position 
+        rail -> Synchronization : Initial position reached
+        Synchronization -> Cylinder : Close mold
+        Synchronization -> rail : Move to end position
+        end
+        opt Rail at end position
+            rail -> Synchronization : Final Position reached
+            Synchronization -> Cylinder : Open mold
+            Synchronization -> rail : Return to start
         end
     end
 end
 
 == Emergency Stop ==
-note over extruder, cutter
+note over extruder, Synchronization
     Any component can trigger E-stop
     All movements stop immediately
 end note
