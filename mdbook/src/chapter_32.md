@@ -18,7 +18,7 @@ participant "Synchronization"
 
 
 == Initialization ==
-
+User -> Synchronization : Start the machine
 extruder -> Synchronization : Material speed
 Synchronization -> haul_off : Speed Synchronization
 Synchronization -> rail : Speed Synchronization
