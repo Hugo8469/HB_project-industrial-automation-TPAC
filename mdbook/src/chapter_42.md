@@ -20,6 +20,11 @@ The example of a risk reduction process used in the NEN-EN-ISO 13849-1:2023, wil
 
 ![Risk reduction process](./riskreduction.png)
 
+The steps that will be performed are:</br>
+1. Risk analysis </br>
+2. Risk evaluation </br>
+3. Risk assesment </br>
+
 After the final design was chosen, the limits of the machine where summed up in a table together with the hazards caused by those limits. the consequences where noted. Then, the risk was given a grade between 1-25, determined by the product of grading the effect and the chance of the risk both between 1-5. Then a potential measure is thought of, and the risk is graded again, with measure.
 
 ## Effect (Impact/Severity) – Scale 1 to 5
