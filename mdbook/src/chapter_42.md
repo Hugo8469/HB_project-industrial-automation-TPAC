@@ -10,8 +10,10 @@ Risk: Combination fo the probability of the occurance of harm and the sevirity o
 
 Risk analysis: combination of the specification of the limits of the machine, hazard identification and risk estimation. </br>
 
-risk evaluation: judgement, on the basis of risk analysis, of whether risk reduction objectives have been achieved. </br>
+Risk evaluation: judgement, on the basis of risk analysis, of whether risk reduction objectives have been achieved. </br>
 
-risk assessment: overall process comprising risk analysis and risk evaluation. </br>
+Risk assessment: overall process comprising risk analysis and risk evaluation. </br>
+
+![Risk reduction process](./riskreduction.png)
 
 
